@@ -1,0 +1,24 @@
+<h2>Añadir producto</h2>
+<div>
+    <label>Id:</label>
+    <input type="number" [(ngModel)]="idProducto">
+</div>
+<div>
+    <label>Nombre:</label>
+    <input type="test" [(ngModel)]="nombreProducto">
+</div>
+<div>
+    <label>Precio:</label>
+    <input type="number" [(ngModel)]="precioUnitario" step="0.01">
+</div>
+<div>
+    <label>Unidades:</label>
+    <input type="number" [(ngModel)]="unidadesStock">
+</div>
+<div>
+    <label>Discontinuidad:</label>
+    <input type="number" [(ngModel)]="discontinuidad">
+</div>
+<div>
+    <button class="btn btn-primary" (click)="anyadirProducto()">Añadir</button>
+</div>

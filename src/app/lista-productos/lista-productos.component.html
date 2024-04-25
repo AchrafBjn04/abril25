@@ -1,0 +1,17 @@
+<div class="button-anyadir">
+    <button class="btn btn-primary" [routerLink]="['/home/alta']">Dar alta producto</button>
+    <button class="btn btn-primary" [routerLink]="['/home/modificar']">Modificar producto</button>
+    <button class="btn btn-primary" [routerLink]="['/home/eliminar']">Eliminar producto</button>
+</div>
+
+<h1>Lista de Productos</h1>
+@for (producto of productos; track $index) {
+    <ul>
+        <li>{{producto.idProducto}} {{producto.nombreProducto}} {{producto.precioUnitario}} {{producto.unidadesStock}} {{producto.discontinuidad}}</li>
+        <button class="btn btn-secondary" (click)="eliminarProducto(producto.idProducto)">Eliminar</button>
+    </ul>
+}
+@empty {
+    <p>No hay datos</p>
+}
+<router-outlet (emitter)="obtenerProductos()"></router-outlet>
